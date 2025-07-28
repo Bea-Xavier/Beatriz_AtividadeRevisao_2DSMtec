@@ -4,11 +4,13 @@ public class ContaPoupanca implements Conta {
     @Override
     public void depositar(double valor){
         this.saldo += valor;
+        GeradorExtratos.registrarAcao("Depósito realizado na Conta Poupança");
     }
 
     @Override
     public void sacar(double valor) {
-        this.saldo -= valor; 
+        this.saldo -= valor;
+        GeradorExtratos.registrarAcao("Saque realizado na Conta Poupança");
     }
 
     @Override

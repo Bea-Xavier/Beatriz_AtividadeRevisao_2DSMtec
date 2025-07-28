@@ -1,5 +1,5 @@
 interface Conta {
     void depositar(double valor);
-    void sacar(double valotr);
+    void sacar(double valor);
     double getSaldo();
 }

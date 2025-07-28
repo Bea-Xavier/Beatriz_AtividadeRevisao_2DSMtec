@@ -5,11 +5,13 @@ public class ContaCorrente implements Conta {
     @Override
     public void depositar(double valor){
         this.saldo += valor - taxaOp;
+        GeradorExtratos.registrarAcao("Depósito realizado na Conta Corrente");
     }
 
     @Override
     public void sacar(double valor) {
-        this.saldo -= valor + taxaOp; 
+        this.saldo -= valor + taxaOp;
+        GeradorExtratos.registrarAcao("Saque realizado na Conta Corrente");
     }
 
     @Override
